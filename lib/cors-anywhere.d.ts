@@ -30,13 +30,13 @@ declare module "cors-anywhere" {
       /**
        * If set, requests whose target is listed are blocked.
        */
-      targetBlacklist: []
+      targetBlacklist: string[]
 
       /**
        * If set, requests whose target is not listed are blocked. If this list is empty,
        * all targets are allowed.
        */
-      targetWhitelist: []
+      targetWhitelist: string[]
 
       /**
        * If set, it is called with the origin (string) of the request.

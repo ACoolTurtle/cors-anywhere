@@ -23,6 +23,8 @@ var cors_proxy = require('./lib/cors-anywhere');
 cors_proxy.createServer({
   originBlacklist: originBlacklist,
   originWhitelist: originWhitelist,
+  targetBlacklist: [],            // Requests to these targets will be blocked.
+  targetWhitelist: ['https://www.churchofjesuschrist.org'],
   requireHeader: ['origin', 'x-requested-with'],
   checkRateLimit: checkRateLimit,
   removeHeaders: [
